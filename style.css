@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  padding:2vw 4vw;
+  background: rgb(249,249,249);
+}
+.nav{
+    float: left;
+    width: 20%;
+}
+.nav .header p{
+  font-weight:800;
+  font-size: 3.5vw;
+  line-height: 1vw;
+}
+.nav .menu ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-inline-start: 0;
+}
+.nav .menu ul li{
+    display: block;
+    list-style: none;
+    left: 0;
+    top: 0;
+    padding: 2vw 0;
+}
+.nav .menu ul li a{
+    text-decoration: none;
+    color: darkgray;
+    font-weight: 400;
+    font-size: 1.7vw;
+}
+.nav .menu ul li a.active{
+    text-decoration-line: line-through;
+    text-decoration-color: rgb(252, 52, 76);
+}
+.nav .cart button{
+    background-color: rgb(252, 52, 76);
+    border: none;
+    color: white;
+    padding: 1vw 4vw;
+    border-radius: 50px;
+    font-weight: 300;
+    font-size: 2vw;
+    margin-top: 2vh;
+}
+.checkbtn{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+#cart{
+    display: none;
+}
+.que{
+    float: left;
+    width: 60%;
+    box-sizing: border-box;
+    padding: 3vw 0;
+}
+.que p{
+    font-weight: bolder;
+    font-size: 7vw;
+}
+.desc{
+    float: right;
+    width: 15%;
+    margin-top: 10vw;
+}
+.desc p{
+    font-weight: 200;
+    font-size: 1.6vw;
+    color: darkgray;
+    line-height: 2.2vw;
+}
+.desc-1{
+    display: none;
+}
+hr{
+    width: 5vh;
+    margin-left: -1%;
+    height: 2px;
+    background-color: rgb(252, 52, 76);
+    border: none;
+}
+.ctn{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.ctn .card{
+    box-sizing: border-box;
+    height: 16vw;
+    width: 20vw;
+    margin-left: 2vw;
+    background:white;
+    box-shadow: 20px 20px 35px lightgrey;
+    border-radius: 2vw;
+    text-align: center;
+    padding: 1.5vw;
+}
+.ctn .card img{
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
+}
+.ctn .card p{
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+@media screen and (max-width: 600px) {
+    body{
+        padding: 3vw 3vw;
+    }
+    .nav{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .checkbtn{
+        display: block;
+        width: 20%;
+    }
+    .nav .menu ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        z-index: 1000;
+    }   
+    .nav .menu ul li{
+        display: block;
+        line-height: 20px;
+
+    }
+    .nav .menu ul li a{
+        font-size: 20px;
+        text-align: center;     
+    }
+    #check:checked ~ .nav .menu ul{
+        left: 0%;
+    }
+    .cart button{
+        display: none;        
+    }
+    #hide{
+        display: none;
+    }
+    .nav .header{
+        width: 55%;
+        float: left;
+        text-align: center;
+    }
+    .nav .header p{
+        font-size: 8vw;
+        text-align: center;
+    }
+    .nav .cart{
+        float: right;
+        width: 20%;
+        text-align: end;
+    }
+    .nav .cart #cart{
+        display: block;
+       
+    }
+    .ctn{
+        width: 95%;
+        float: left;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .ctn .card{
+        height: 45vw;
+        width: 38vw;
+        margin-bottom: 5vw;
+        margin-left: 5vw;
+        border-radius: 5vw;
+        padding: 5vw;
+    }
+    .ctn .card img{
+        height: 24vw;
+        width: 24vw;
+    }
+    .ctn .card p{
+        font-size: 4vw;
+    }
+    .desc{
+        display: none;
+    }
+    .desc-1{
+        display: block;
+        width: 90%;
+        float: left;
+        margin-top: 5vw;
+    }
+    .desc-1 p{
+        font-weight: 300;
+        font-size: 5vw;
+        color: darkgray;
+    }
+}
